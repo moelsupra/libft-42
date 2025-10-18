@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:27:31 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/14 12:38:01 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/18 10:53:28 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,9 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+int main(int argc, char const *argv[])
+{
+	ft_isalnum(NULL);
+	return 0;
+}
+
