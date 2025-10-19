@@ -18,7 +18,7 @@ int	ft_atoi(char *str)
 {
 	int	i;
 	int	sign;
-	long	result;
+	unsigned long	result;
 
 	i = 0;
 	sign = 1;
@@ -38,17 +38,17 @@ int	ft_atoi(char *str)
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	if (result > 2147483647 && sign == 1)
-		return (-1);
-	else if (result > 2147483647 && sign == -1)
-		return (0);
+	// if (result > 2147483647 && sign == 1)
+	// 	return (result);
+	// else if (result > 2147483647 && sign == -1)
+	// 	return (result);
 	return (result * sign);
 }
 
 
 int main(int argc, char const *argv[])
 {
-	char str[] = "922337203685477580";
+	char str[] = "-214748364812454";
 	int res1 = ft_atoi(str);
 	int res2 = atoi(str);
 	printf("ft_atoi: %d\n", res1);

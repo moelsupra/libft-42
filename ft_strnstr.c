@@ -30,13 +30,15 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
                 return (char *)(haystack + i);
             j++;
         }
+
+
         i++;
     }
     return (0);
 }
 int main() {
-  const char *haystack = "Hello, this is a simple example.";
-  const char *needle = "5";
+  const char *haystack = "Hello, this is a simple thist example.";
+  const char *needle = "thist";
   size_t len = 25;
 
   char *result = ft_strnstr(haystack, needle, len);

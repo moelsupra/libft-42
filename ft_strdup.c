@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 12:42:18 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/19 18:46:44 by moelamma         ###   ########.fr       */
+/*   Created: 2025/10/19 12:39:50 by moelamma          #+#    #+#             */
+/*   Updated: 2025/10/19 18:13:32 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-int ft_isdigit(int c);
-int ft_isalpha(int c);
-size_t  ft_strlen(const char *s);
-void    ft_bzero(void *s, size_t n);
-char   *ft_strdup(const char *s);
-char *ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strdup(const char *s)
+{
+	char	*arr;
+	int		i;
+	int		size;
 
-
-#endif
+	i = 0;
+	size = ft_strlen(s);
+	arr = (char *) malloc(sizeof(char) * (size + 1));
+	if (!(arr))
+		return (0);
+	while (s[i])
+	{
+		arr[i] = s[i];
+		i++;
+	}
+	arr[i] = '\0';
+	return (arr);
+}
