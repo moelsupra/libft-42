@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 14:57:41 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/19 18:45:18 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/24 18:53:38 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 // int main()
 // {
 //     char stt[] = "Hello 1337\0";
-//     char *s1 = ft_substr(stt, 13, 10000000);
+//     char *s1 = ft_substr(stt, 6, 3);
 //     printf("%s \n", s1);
 //     return 0;
 // }
