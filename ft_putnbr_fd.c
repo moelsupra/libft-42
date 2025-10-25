@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 12:27:31 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/25 20:44:08 by moelamma         ###   ########.fr       */
+/*   Created: 2025/10/25 22:23:42 by moelamma          #+#    #+#             */
+/*   Updated: 2025/10/25 22:25:41 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+ #include <unistd.h>
 
-int	ft_isalnum(int c)
+void ft_putnbr_fd(int n, int fd)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
+    if (n == -2147483648)
+    {
+        write(fd, "-2147483648", 11);
+        return;
+    }
+    if (n < 0)
+    {
+        n *= -1;
+        write(fd, "-", 1);
+    }
+    if (n >= 9)
+        putnbr(n/10);
+    n = n % 10 + '0';
+    write(fd, &n, 1);   
 }
-int main(int argc, char const *argv[])
-{
-	ft_isalnum(NULL);
-	return 0;
-}
-
