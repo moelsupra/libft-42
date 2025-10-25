@@ -6,18 +6,26 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 19:44:35 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/18 22:18:38 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/25 16:40:53 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <limits.h>
+
+int	ft_ret(int sin)
+{
+	if (sin == 1)
+		return (-1);
+	return (1);
+}
 
 int	ft_atoi(char *str)
 {
-	int	i;
-	int	sign;
+	int				i;
+	int				sign;
 	unsigned long	result;
 
 	i = 0;
@@ -33,22 +41,18 @@ int	ft_atoi(char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (result > 9223372036854775807)
-			return (sign == 1 ? -1 : 0);
+		if (result > LONG_MAX)
+			return (ft_ret(sign));
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	// if (result > 2147483647 && sign == 1)
-	// 	return (result);
-	// else if (result > 2147483647 && sign == -1)
-	// 	return (result);
 	return (result * sign);
 }
 
 
-int main(int argc, char const *argv[])
+int main()
 {
-	char str[] = "-214748364812454";
+	char str[] = "2147483647";
 	int res1 = ft_atoi(str);
 	int res2 = atoi(str);
 	printf("ft_atoi: %d\n", res1);
