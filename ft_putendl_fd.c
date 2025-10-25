@@ -6,15 +6,15 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 22:19:01 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/25 22:20:24 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/25 23:36:31 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')

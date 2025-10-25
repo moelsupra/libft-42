@@ -6,13 +6,13 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:49:16 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/14 13:12:33 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/25 23:12:43 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int  c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    return (0);    
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

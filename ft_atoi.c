@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 19:44:35 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/25 16:40:53 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/26 00:07:08 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,12 @@ int	ft_atoi(char *str)
 	return (result * sign);
 }
 
-
-int main()
-{
-	char str[] = "2147483647";
-	int res1 = ft_atoi(str);
-	int res2 = atoi(str);
-	printf("ft_atoi: %d\n", res1);
-	printf("atoi: %d\n", res2);
-	
-	return 0;
-	
-}
+// int main()
+// {
+// 	char str[] = "2147483647";
+// 	int res1 = ft_atoi(str);
+// 	int res2 = atoi(str);
+// 	printf("ft_atoi: %d\n", res1);
+// 	printf("atoi: %d\n", res2);
+// 	return 0;
+// }

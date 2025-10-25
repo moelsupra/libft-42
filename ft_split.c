@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 09:52:45 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/25 16:19:07 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/26 00:12:54 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,12 +105,12 @@ char	**ft_split(char *str, char charset)
 	return (split);
 }
 
-int main()
-{
-	char str[] = "Hello        world            my    name is    otawa fr    kdfg"; 
-	char **str1 = ft_split(str, ' ');
-	for (int i = 0; i < count(str, 32); i++)
-	{
-		printf("%s\n", str1[i]);
-	}
-}
+// int main()
+// {
+// 	char str[] = "Hel  world  my    name is    otawa fr    kdfg";
+// 	char **str1 = ft_split(str, ' ');
+// 	for (int i = 0; i < count(str, 32); i++)
+// 	{
+// 		printf("%s\n", str1[i]);
+// 	}
+// }

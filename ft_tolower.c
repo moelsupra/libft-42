@@ -6,13 +6,13 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:06:02 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/18 15:06:22 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/26 00:05:16 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int    ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-        return (c + 32);
-    return (c);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }

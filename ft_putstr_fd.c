@@ -6,21 +6,20 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 22:10:38 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/25 22:18:19 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/26 00:14:28 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
-

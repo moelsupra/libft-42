@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 11:44:50 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/19 12:38:08 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/26 00:07:39 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@
 #include <stdio.h>
 #include "./libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	// // (int)nmemb;
-	// printf("%zu %zu\n", (size_t)nmemb, (size_t)size);
-	// printf("%d %d\n", (int)nmemb, (int)size);
+	size_t	total_size;
+	void	*ptr;
 
-	size_t total_size;
-	void *ptr;
-	if((int)nmemb >= 0 && (int)size >= 0)
+	if ((int)nmemb >= 0 && (int)size >= 0)
 	{
 		total_size = nmemb * size;
 		ptr = malloc(total_size);
-		if(ptr)
+		if (ptr)
 		{
 			ft_bzero(ptr, total_size);
 			return (ptr);
@@ -34,24 +31,23 @@ void *ft_calloc(size_t nmemb, size_t size)
 	}
 	return (0);
 }
-int main()
-{
-	int *arr;
-	size_t n = -1;
-	size_t size = sizeof(int);
-	
-	arr = (int *)ft_calloc(n, size);
-	if(arr == NULL)
-	{
-		printf("Memory allocation failed\n");
-		return (1);
-	}
-	
-	for(size_t i = 0; i < n; i++)
-	{
-		printf("%d ", arr[i]);
-	}
-	printf("\n");
-	free(arr);
-	return (0);
-}
+
+// int main()
+// {
+// 	int *arr;
+// 	size_t n = -1;
+// 	size_t size = sizeof(int);
+// 	arr = (int *)ft_calloc(n, size);
+// 	if(arr == NULL)
+// 	{
+// 		printf("Memory allocation failed\n");
+// 		return (1);
+// 	}
+// 	for(size_t i = 0; i < n; i++)
+// 	{
+// 		printf("%d ", arr[i]);
+// 	}
+// 	printf("\n");
+// 	free(arr);
+// 	return (0);
+// }

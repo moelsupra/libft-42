@@ -6,13 +6,13 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:58:33 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/14 15:06:19 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/25 23:13:30 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int  c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 127)
+		return (1);
+	return (0);
 }

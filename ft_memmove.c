@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 10:29:14 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/18 12:49:25 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/26 00:09:28 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			*d++ = *s++;
 	return (dst);
 }
- int main(int argc, char const *argv[])
- {
-	char str[10] ="123456789";
-	ft_memmove(str, NULL, 5); 
-	printf("%s\n", str);
-	return 0;
- }
+
+//  int main(int argc, char const *argv[])
+//  {
+// 	char str[10] ="123456789";
+// 	ft_memmove(str, NULL, 5); 
+// 	printf("%s\n", str);
+// 	return 0;
+//  }

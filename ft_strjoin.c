@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 17:30:41 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/19 18:40:55 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/10/26 00:10:54 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	char	*p;
 	int		len;
-	
+
 	i = 0;
 	j = 0;
-	if (s1==NULL && s2==NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	if(s1==NULL)
+	if (s1 == NULL)
 		return (ft_strdup(s2));
-	if(s2==NULL)
+	if (s2 == NULL)
 		return (ft_strdup(s1));
 	len = ft_strlen(s1) + ft_strlen(s2);
 	p = (char *)malloc(sizeof(char) * len + 1);
@@ -54,12 +54,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (p);
 }
 
-int main()
-{
-    char str1[] = "hello  bbbbbbb hello bbbbbbb hello";
-    char str2[] = "leho";
-	printf("result:");
-    char *result = ft_strjoin(str1, str2);
-	printf("%s\n", result);
-    return 0;
-}
+// int main()
+// {
+//     char str1[] = "hello  bbbbbbb hello bbbbbbb hello";
+//     char str2[] = "leho";
+// 	printf("result:");
+//     char *result = ft_strjoin(str1, str2);
+// 	printf("%s\n", result);
+//     return 0;
+// }
