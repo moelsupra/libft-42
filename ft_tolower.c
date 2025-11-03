@@ -6,9 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:06:02 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:05:16 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:16:12 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

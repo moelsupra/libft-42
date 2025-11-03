@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 15:00:47 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:16:30 by moelamma         ###   ########.fr       */
+/*   Created: 2025/11/01 23:22:08 by moelamma          #+#    #+#             */
+/*   Updated: 2025/11/02 01:16:44 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	t_list	*temp;
+
+	if (!lst || !del)
+		return ;
+	while ((*lst))
+	{
+		temp = (*lst)->next;
+		del((*lst)->content);
+		free((*lst));
+		(*lst) = temp;
+	}
+	*lst = NULL;
 }

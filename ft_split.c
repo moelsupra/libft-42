@@ -5,112 +5,132 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/25 09:52:45 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:12:54 by moelamma         ###   ########.fr       */
+/*   Created: 2025/11/01 01:58:56 by moelamma          #+#    #+#             */
+/*   Updated: 2025/11/03 01:25:26 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-char	**ft_free(char **str, int k)
+static int	count_word(char const *s, char sep)
 {
-	while (--k)
-		free(str[k]);
-	free(str);
-	return (NULL);
-}
-
-int	count(char *str, char sep)
-{
-	int	i;
 	int	word;
+	int	inword;
 
-	i = 0;
 	word = 0;
-	while (str[i] != '\0')
+	inword = 0;
+	while (*s)
 	{
-		while (str[i] != '\0' && (str[i] == sep))
-			i++;
-		if (str[i] != '\0')
+		if (*s == sep)
+			inword = 0;
+		else if (inword == 0)
+		{
 			word++;
-		while (str[i] != '\0' && !(str[i] == sep))
-			i++;
+			inword = 1;
+		}
+		s++;
 	}
 	return (word);
 }
 
-char	*ft_word(char *str, int s, int x)
+static int	word_len(char const *s, char sep)
 {
-	int		i;
-	int		len;
-	char	*arr;
+	int	len;
 
-	i = 0;
-	len = (x) + 1;
-	arr = malloc(sizeof(char) * len);
-	if (!arr)
-		return (NULL);
-	while (x)
+	len = 0;
+	while (*s && *s != sep)
 	{
-		arr[i] = str[s - x];
-		x--;
+		len++;
+		s++;
+	}
+	return (len);
+}
+
+static char	*fill_word(char const *s, char c)
+{
+	int		lenght;
+	int		i;
+	char	*word;
+
+	lenght = word_len(s, c);
+	word = malloc((lenght + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (i < lenght)
+	{
+		word[i] = s[i];
 		i++;
 	}
-	arr[i] = '\0';
+	word[i] = '\0';
+	return (word);
+}
+
+static void	free_all(char **arr, int i)
+{
+	while (i >= 0)
+	{
+		free(arr[i]);
+		i--;
+	}
+	free(arr);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	int		i;
+
+	if (!s)
+		return (NULL);
+	arr = malloc((count_word(s, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
+	i = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s)
+		{
+			arr[i] = fill_word(s, c);
+			if (!arr[i])
+				return (free_all(arr, i - 1), NULL);
+			s += word_len(s, c);
+			i++;
+		}
+	}
+	arr[i] = NULL;
 	return (arr);
 }
 
-int	ft_count_the_word(char *str, char sep, int i)
-{
-	int	x;
-
-	x = 0;
-	while (i)
-	{
-		if (str[--i] != sep)
-			x++;
-		else
-			break ;
-	}
-	return (x);
-}
-
-char	**ft_split(char *str, char charset)
-{
-	char	**split;
-	int		k;
-	int		i;
-	int		j;
-
-	(1 && (k = 0, i = 0));
-	if (str == NULL)
-		return (NULL);
-	split = malloc(sizeof(char *) * (count(str, charset) + 1));
-	if (split == NULL)
-		return (0);
-	while (str[i] != '\0')
-	{
-		j = 0;
-		while (str[i] != '\0' && str[i] != charset)
-			i++;
-		while (str[i + j] != '\0' && str[i + j] == charset)
-			j++;
-		split[k++] = ft_word(str, i, ft_count_the_word(str, charset, i));
-		if (!split[k - 1])
-			return (ft_free(split, k));
-		i += j;
-	}
-	split[k] = 0;
-	return (split);
-}
-
-// int main()
+// int main(void)
 // {
-// 	char str[] = "Hel  world  my    name is    otawa fr    kdfg";
-// 	char **str1 = ft_split(str, ' ');
-// 	for (int i = 0; i < count(str, 32); i++)
-// 	{
-// 		printf("%s\n", str1[i]);
-// 	}
+//     char **result;
+//     int i;
+
+//     result = ft_split("   hello  world  test   ", ' ');
+//     if (!result)
+//     {
+//         printf("Error: ft_split returned NULL\n");
+//         return (1);
+//     }
+
+//     i = 0;
+//     while (result[i])
+//     {
+//         printf("Word %d: '%s'\n", i, result[i]);
+//         i++;
+//     }
+
+//     // Free everything
+//     i = 0;
+//     while (result[i])
+//     {
+//         free(result[i]);
+//         i++;
+//     }
+//     free(result);
+
+//     return (0);
 // }

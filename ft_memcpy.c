@@ -6,13 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 21:55:56 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:09:02 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:11:06 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
@@ -29,6 +27,15 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (dst);
 }
+
+// int main()
+// {
+// 	char src[] = "sdfghg";
+// 	char dst[] = "";
+// 	printf("dst :%s\n", dst);
+// 	printf("src %s\n", src);
+// 	printf("dst %s\n",ft_memcpy(&dst, &src, 6));
+// }
 
 // int main () {
 // 	char src[] = "Hello, World!";

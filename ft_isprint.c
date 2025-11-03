@@ -6,13 +6,15 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:58:33 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/25 23:13:30 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:08:43 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

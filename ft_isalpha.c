@@ -6,13 +6,15 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:58:00 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/14 12:21:05 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:08:13 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
-	if ((c >= 101 && c <= 132) || (c >= 141 && c <= 172))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }

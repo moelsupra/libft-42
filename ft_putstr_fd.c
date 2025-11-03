@@ -6,11 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 22:10:38 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:14:28 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:12:01 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

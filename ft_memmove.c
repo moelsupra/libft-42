@@ -6,13 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 10:29:14 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:09:28 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:11:14 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

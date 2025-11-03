@@ -6,23 +6,23 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 17:21:04 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:08:37 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:10:25 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*ptr;
-	char	ch;
+	unsigned char	*ptr;
+	unsigned char	ch;
 
-	ptr = (char *)s;
-	ch = (char)c;
+	ptr = (unsigned char *)s;
+	ch = (unsigned char)c;
 	while (n--)
 	{
 		if (*ptr == ch)
-			return (ptr);
+			return ((void *)ptr);
 		ptr++;
 	}
 	return (NULL);

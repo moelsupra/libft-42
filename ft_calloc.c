@@ -6,13 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 11:44:50 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:07:39 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:07:20 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

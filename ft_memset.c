@@ -6,43 +6,48 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:56:40 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:14:13 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:19:49 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*pointer;
-	// unsigned char uc = (unsigned char)c;
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
 	pointer = (unsigned char *) b;
 	while (len)
-		pointer[--len] = c;
+		pointer[--len] = uc ;
 	return (b);
 }
 
 // int main () {
-// 	// int s = 0;
-// 	// // memset(&s, 0000010100111001, 4);
-// 	// printf("&s: %X\n", &s);
-// 	// ft_memset(&s, 0, 4);
-// 	// ft_memset(&s, 5, 2);
-// 	// ft_memset(&s, 57, 1);
-// 	char s[5];
-// 	// memset(&s, 0000010100111001, 4);
-// 	ft_memset(&s, '7', 4);
-// 	ft_memset(&s, '3', 3);
-// 	ft_memset(&s, '3', 2);
-// 	ft_memset(&s, '1', 1);
-// 	printf("%s\n", s);
-// 	// ft_memset(&s, 0, 4);
-// 	// ft_memset(&s, 1337, 4);
-// 	// printf("%d\n",memset(&s, 257, 4));
-// 	// printf("%d\n",ft_memset(&s, 257, 4));
-// // memset(&s, 0b01010011, 4);
-// // memset(((char*)&s) + 1, 0b00111001, 1);
-// }  
-// ///|0000 0000|0000 0000|0000 0000|0000 0000
-// // 0000 0101 0011 1001
+// 	int i = 0;
+// 	ft_memset(&i, 0, 4);
+// 	ft_memset(&i, 42, 1);
+// 	// ft_memset((char *)&i+1, 5, 1);
+// 	printf("+%d+",i);
+
+// 	// ----------------------
+// 	int s = 0;
+// 	ft_memset(&s, 0, 4);
+// 	ft_memset(&s, 5, 2);
+// 	ft_memset(&s, 57, 1);
+
+// 	printf("%d", s);
+
+// }
+//						5		57
+// 00000000 00000000 00000000 00000000 => 0
+// 00000000 00000000 00000000 00111001 => 57
+// 00000000 00000000 00000101 00111001 => 1337
+
+// 42
+// 000000000000000 | 101101100101101
+
+// 00000000 00000000 01011011 10110110
+// 00101101 00101101 00101101 00101101
+// 00101101

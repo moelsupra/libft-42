@@ -6,29 +6,25 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:28:22 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:14:51 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:21:21 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-	// if (s == NULL)
-	//     return (0);
+	int	len;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	if (s == NULL)
+		return (NULL);
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i--;
+		if (s[len] == (char)c)
+			return ((char *)s + len);
+		len--;
 	}
-	if (*s == (char)c)
-		return ((char *)s);
 	return (0);
 }
 

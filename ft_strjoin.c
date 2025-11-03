@@ -6,25 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 17:30:41 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:10:54 by moelamma         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ataoufik <ataoufik@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 01:18:08 by ataoufik          #+#    #+#             */
-/*   Updated: 2023/11/12 15:56:54 by ataoufik         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:13:10 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -42,13 +28,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s2 == NULL)
 		return (ft_strdup(s1));
 	len = ft_strlen(s1) + ft_strlen(s2);
-	p = (char *)malloc(sizeof(char) * len + 1);
+	p = (char *)malloc(sizeof(char) * (len + 1));
 	if (!p)
 		return (NULL);
-	while (s1[i] != '\0' && s1 != NULL)
+	while (s1[i] != '\0')
 		p[j++] = s1[i++];
 	i = 0;
-	while (s2[i] != '\0' && s2 != NULL)
+	while (s2[i] != '\0')
 		p[j++] = s2[i++];
 	p[j] = '\0';
 	return (p);

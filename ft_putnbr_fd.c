@@ -6,14 +6,16 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 22:23:42 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/25 23:38:05 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:11:57 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	char	c;
+
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
@@ -24,8 +26,8 @@ void	ft_putnbr_fd(int n, int fd)
 		n *= -1;
 		write(fd, "-", 1);
 	}
-	if (n >= 9)
-		putnbr(n / 10);
-	n = n % 10 + '0';
-	write(fd, &n, 1);
+	if (n > 9)
+		ft_putnbr_fd(n / 10, fd);
+	c = n % 10 + '0';
+	write(fd, &c, 1);
 }

@@ -6,12 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:07:09 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:11:01 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:14:02 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

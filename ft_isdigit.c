@@ -6,9 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:19:27 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/14 12:37:06 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:08:28 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

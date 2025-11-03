@@ -6,23 +6,20 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 19:44:35 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:07:08 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:24:46 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <limits.h>
+#include "libft.h"
 
-int	ft_ret(int sin)
+static	int	ft_return_long(int sign)
 {
-	if (sin == 1)
+	if (sign == 1)
 		return (-1);
-	return (1);
+	return (0);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int				i;
 	int				sign;
@@ -33,16 +30,16 @@ int	ft_atoi(char *str)
 	result = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign *= -1;
+			sign = -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (result > LONG_MAX)
-			return (ft_ret(sign));
+		if (result > 9223372036854775807UL)
+			return (ft_return_long(sign));
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
@@ -51,7 +48,7 @@ int	ft_atoi(char *str)
 
 // int main()
 // {
-// 	char str[] = "2147483647";
+// 	char str[] = "             -++-+-+-9";
 // 	int res1 = ft_atoi(str);
 // 	int res2 = atoi(str);
 // 	printf("ft_atoi: %d\n", res1);

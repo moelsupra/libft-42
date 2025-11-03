@@ -6,13 +6,11 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 16:26:47 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:11:25 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:14:32 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -21,8 +19,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
 	return (0);
@@ -30,9 +28,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int main()
 // {
-// 	const char *s1 = "HellOWorld";
-// 	const char *s2 = "HelloWorle";
-// 	size_t n = 1;
+// 	// ft_strncmp("test\200", "test\0", 6)
+// 	const char *s1 = "test\200";
+// 	const char *s2 = "test\0";
+// 	size_t n = 6;
 // 	int result = ft_strncmp(s1, s2, n);
 // 	int result2 = strncmp(s1, s2, n);
 // 	printf("-> : %d\n", result);
