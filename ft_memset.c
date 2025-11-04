@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:56:40 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 01:20:16 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 02:03:51 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	uc;
 
 	uc = (unsigned char)c;
-	pointer = (unsigned char *) b;
+	pointer = (unsigned char *)b;
 	while (len)
-		pointer[--len] = uc ;
+		pointer[--len] = uc;
 	return (b);
 }
