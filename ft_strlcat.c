@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:11:00 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 01:11:35 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:51:03 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	lensrc;
 	size_t	i;
 
-	lendst = ft_strlen(dst);
 	lensrc = ft_strlen(src);
 	lendst = 0;
 	while (dst[lendst] && lendst < dstsize)

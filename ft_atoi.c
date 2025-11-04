@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 19:44:35 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 01:06:27 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:48:50 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (result > 9223372036854775807UL)
+		if (result > ((unsigned long)LONG_MAX - (str[i] - '0')) / 10)
 			return (ft_return_long(sign));
 		result = result * 10 + (str[i] - '0');
 		i++;

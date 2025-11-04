@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 01:58:56 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 01:10:24 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:50:27 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,3 @@ char	**ft_split(char const *s, char c)
 	arr[i] = NULL;
 	return (arr);
 }
-
-// }
