@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 11:44:50 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:07:20 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:06:54 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	int *arr;
-// 	size_t n = -1;
-// 	size_t size = sizeof(int);
-// 	arr = (int *)ft_calloc(n, size);
-// 	if(arr == NULL)
-// 	{
-// 		printf("Memory allocation failed\n");
-// 		return (1);
-// 	}
-// 	for(size_t i = 0; i < n; i++)
-// 	{
-// 		printf("%d ", arr[i]);
-// 	}
-// 	printf("\n");
-// 	free(arr);
-// 	return (0);
-// }

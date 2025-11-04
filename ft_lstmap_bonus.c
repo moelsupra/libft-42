@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 00:55:07 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/02 01:17:41 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 01:50:07 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newnode;
 	void	*content;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	newlist = NULL;
 	while (lst)
@@ -27,6 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		newnode = ft_lstnew(content);
 		if (!newnode)
 		{
+			del(content);
 			ft_lstclear(&newlist, del);
 			return (NULL);
 		}

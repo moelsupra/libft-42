@@ -6,16 +6,13 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:42:18 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:12:46 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:15:49 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
 # include <stdlib.h>
-# include <stdio.h>
-# include <string.h>
 # include <unistd.h>
 
 int		ft_isalpha(int argument);

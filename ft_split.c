@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 01:58:56 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:25:26 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:10:24 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,33 +104,4 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-// int main(void)
-// {
-//     char **result;
-//     int i;
-
-//     result = ft_split("   hello  world  test   ", ' ');
-//     if (!result)
-//     {
-//         printf("Error: ft_split returned NULL\n");
-//         return (1);
-//     }
-
-//     i = 0;
-//     while (result[i])
-//     {
-//         printf("Word %d: '%s'\n", i, result[i]);
-//         i++;
-//     }
-
-//     // Free everything
-//     i = 0;
-//     while (result[i])
-//     {
-//         free(result[i]);
-//         i++;
-//     }
-//     free(result);
-
-//     return (0);
 // }

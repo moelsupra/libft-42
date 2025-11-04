@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 17:30:41 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:13:10 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:11:19 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[j] = '\0';
 	return (p);
 }
-
-// int main()
-// {
-//     char str1[] = "hello  bbbbbbb hello bbbbbbb hello";
-//     char str2[] = "leho";
-// 	printf("result:");
-//     char *result = ft_strjoin(str1, str2);
-// 	printf("%s\n", result);
-//     return 0;
-// }

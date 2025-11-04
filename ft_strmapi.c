@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 18:25:17 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 00:11:15 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:13:29 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[x] = '\0';
 	return (res);
 }
-
-// char	change_case(unsigned int i, char c)
-// {
-// 	if (i % 2 == 0)
-// 		return ft_toupper(c);
-// 	else
-// 		return ft_tolower(c);
-// }
-// int main()
-// {
-// 	char *str = NULL;
-// 	char *str1 = ft_strmapi(str,change_case);
-// 	printf("%s\n", str1);
-// }

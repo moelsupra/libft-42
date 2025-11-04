@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 19:08:10 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:14:53 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/03 20:45:34 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// int main() {
-// 	const char *haystack = "Hello, this is a simple thist example.";
-// 	const char *needle = "thist";
-// 	size_t len = 25;
-// 	char *result = ft_strnstr(haystack, needle, len);
-// 	printf("ft_strnstr result: %s\n", result);
-// 	if (result) {
-// 		printf("Found: %s\n", result);
-// 	} else {
-// 		printf("Not Found\n");
-// 	}
-// 	return 0;
-// }

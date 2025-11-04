@@ -3,6 +3,16 @@
         "stdio.h": "c",
         "string.h": "c",
         "libft.h": "c",
-        "sstream": "c"
+        "sstream": "c",
+        "__bit_reference": "c",
+        "__hash_table": "c",
+        "__split_buffer": "c",
+        "array": "c",
+        "iterator": "c",
+        "memory": "c",
+        "string": "c",
+        "string_view": "c",
+        "unordered_map": "c",
+        "vector": "c"
     }
 }

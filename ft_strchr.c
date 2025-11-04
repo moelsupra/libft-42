@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:06:50 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:12:26 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:10:32 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (0);
 }
-
-// int main() {
-// 	char myStr[] = "Hello World";
-// 	// char *myPtr = ft_strchr(myStr, '\0');
-// 	char *myPtr1 = strchr(myStr, '\0');
-// 	if (myPtr1 != NULL) {
-// 		// printf("%s\n", myPtr);
-// 		printf("%s", myPtr1);
-// 	}
-// 	return 0;
-// }

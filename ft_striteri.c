@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 20:35:02 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/28 00:01:20 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:10:51 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// void	change_case(unsigned int i, char *ptr)
-// {
-// 	if ((*ptr >= 'a' && *ptr < 'z') || (*ptr >= 'A' && *ptr < 'Z'))
-// 		*ptr += 1;
-// 	else if (*ptr == 'Z' || *ptr == 'z')
-// 		*ptr -= 25;
-// 	else
-// 		i++;
-// }
-// int main()
-// {
-// 	char c[] = "Hello, r4r!\n";
-// 	ft_striteri(c, change_case);
-// 	printf("%s\n", c);
-// }

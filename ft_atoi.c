@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 19:44:35 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:24:46 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:06:27 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-// int main()
-// {
-// 	char str[] = "             -++-+-+-9";
-// 	int res1 = ft_atoi(str);
-// 	int res2 = atoi(str);
-// 	printf("ft_atoi: %d\n", res1);
-// 	printf("atoi: %d\n", res2);
-// 	return 0;
-// }
