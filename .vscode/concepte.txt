@@ -1,0 +1,3 @@
+int ft_isalpha(int c) : Why int parameter? Historical: allows passing unsigned char values safely and EOF checking
+how to create an function cn show warning in console if the user inter an value unexcpected to the func 
+pass by value & pass by addresse 
