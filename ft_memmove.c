@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 10:29:14 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 13:23:53 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/07 20:57:15 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (dst);
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
+	if (d == s)
+		return (d);
 	if (d > s)
 		while (len-- > 0)
 			d[len] = s[len];

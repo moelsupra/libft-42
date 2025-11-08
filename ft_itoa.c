@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 14:03:48 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/03 01:09:06 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/07 23:16:13 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ char	*ft_itoa(int n)
 
 	len = numlen(n);
 	num = malloc(len + 1);
-	l = n;
-	signe = 0;
 	if (!num)
 		return (NULL);
+	l = n;
+	signe = 0;
 	num[len] = '\0';
 	if (l < 0)
 	{

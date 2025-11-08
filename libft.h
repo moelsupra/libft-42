@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:42:18 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 01:41:21 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/07 21:19:02 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-# include <limits.h>
 
 int		ft_isalpha(int argument);
 int		ft_isdigit(int arg);

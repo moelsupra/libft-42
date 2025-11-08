@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 18:25:17 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 17:08:37 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/07 20:38:54 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*res;
 
 	x = 0;
-	i = ft_strlen(s);
 	if (!s || !f)
 		return (NULL);
+	i = ft_strlen(s);
 	res = malloc(i + 1);
 	if (!res)
 		return (NULL);

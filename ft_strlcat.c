@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:11:00 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 01:51:03 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/07 22:26:14 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	lensrc = ft_strlen(src);
 	lendst = 0;
+	if (!dst && !dstsize)
+		return (lensrc);
 	while (dst[lendst] && lendst < dstsize)
 		lendst++;
 	if (dstsize <= lendst)
@@ -30,6 +32,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[lendst + i] = src[i];
 		i++;
 	}
+	if (dst == src)
+		return (lendst + (dstsize - 1));
 	dst[lendst + i] = '\0';
 	return (lendst + lensrc);
 }

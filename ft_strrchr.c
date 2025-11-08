@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:28:22 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 01:13:49 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/07 20:27:41 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + len);
 		len--;
 	}
-	return (0);
+	return (NULL);
 }

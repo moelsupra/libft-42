@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 21:55:56 by moelamma          #+#    #+#             */
-/*   Updated: 2025/11/04 19:41:17 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/07 20:58:29 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		return (NULL);
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
+	if (d == s)
+		return (d);
 	while (n--)
 		*d++ = *s++;
 	return (dst);

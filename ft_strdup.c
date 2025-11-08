@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 12:39:50 by moelamma          #+#    #+#             */
-/*   Updated: 2025/10/26 23:18:10 by moelamma         ###   ########.fr       */
+/*   Updated: 2025/11/07 20:44:59 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strdup(const char *s)
 	size = ft_strlen(s);
 	arr = (char *) malloc(sizeof(char) * (size + 1));
 	if (!(arr))
-		return (0);
+		return (NULL);
 	while (s[i])
 	{
 		arr[i] = s[i];
